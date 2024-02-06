@@ -5,6 +5,7 @@
   padding: 0;
   font-family: 'Roboto Flex', sans-serif;
   color: #343434;
+  
 }
 
 body {
@@ -168,7 +169,6 @@ h3{
 }
 
 /* CSS responsivo */
-/* CSS responsivo */
 @media screen and (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -191,7 +191,7 @@ h3{
 
   .container-timer button {
     width: calc(100% / 3 - 10px); /* Divide o espaço em três para cada botão, com uma pequena margem entre eles */
-    margin-right: 10px; /* Adiciona uma margem direita para separar os botões */
+    margin-right: 10px; 
   }
 
   .container-timer button:last-child {
@@ -203,9 +203,7 @@ h3{
 }
 
 @media screen and (max-width: 480px) {
-  .container-timer button, .tasks form input, .tasks form button {
-    width: 100%;
-  }
+  
 
   .tasks form button {
     margin-left: 0;
