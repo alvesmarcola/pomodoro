@@ -168,6 +168,7 @@ h3{
 }
 
 /* CSS responsivo */
+/* CSS responsivo */
 @media screen and (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -187,6 +188,18 @@ h3{
   .tasks-list {
     width: 90%;
   }
+
+  .container-timer button {
+    width: calc(100% / 3 - 10px); /* Divide o espaço em três para cada botão, com uma pequena margem entre eles */
+    margin-right: 10px; /* Adiciona uma margem direita para separar os botões */
+  }
+
+  .container-timer button:last-child {
+    margin-right: 0; /* Remove a margem do último botão para evitar espaçamento extra */
+  }
+  .btns{
+    margin-top: 250px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -197,4 +210,6 @@ h3{
   .tasks form button {
     margin-left: 0;
   }
+  
 }
+
