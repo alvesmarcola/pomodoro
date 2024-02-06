@@ -135,7 +135,7 @@ body {
 
 .tasks-list ol {
   margin: 18px;
-  width: 100%;
+  width: 90%;
   overflow: auto;
 }
 
@@ -151,4 +151,50 @@ body {
 
 .tasks-list ol::-webkit-scrollbar {
   visibility: hidden;
+}
+
+.binaural{
+  margin-top: 10px;
+  text-align: center;
+  justify-content: center;
+}
+
+h2{
+  color: #2A4054;
+}
+
+h3{
+  color: #84A7C5
+}
+
+/* CSS responsivo */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 90vw;
+    height: auto;
+  }
+
+  .container-timer, .tasks {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .tasks-list {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container-timer button, .tasks form input, .tasks form button {
+    width: 100%;
+  }
+
+  .tasks form button {
+    margin-left: 0;
+  }
 }
