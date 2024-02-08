@@ -74,5 +74,5 @@ function startTimer(timer) {
                 selectTimer(selectedTimer); // iniciar outro contador
             });
         }
-    }, 1); 
+    }, 1000); 
 }

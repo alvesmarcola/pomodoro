@@ -16,14 +16,14 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,700&display=swap">
   </head>
   <body class="text-center">
-    <div class="container-fluid image-effect"> <!-- Adicione a classe container-fluid para ocupar a largura total -->
+    <div class="container-fluid image-effect"> 
       <div class="container d-flex justify-content-center align-items-center">
         <div class="row">
           <div class="col-md-6 container-timer text-center justify-content-center">
             <div class="btn-group">
-              <button onclick="selectTimer('pomodoro')" id="pomodoro" class="active-button btn btns mr-2 mb-2 mb-md-0" type="button">Pomodoro</button> <!-- Adicione classes de margem inferior apenas para dispositivos móveis -->
-              <button onclick="selectTimer('short-break')" id="short-break" class="btn btns mr-2 mb-2 mb-md-0" type="button">Intervalo Curto</button> <!-- Adicione classes de margem inferior apenas para dispositivos móveis -->
-              <button onclick="selectTimer('long-break')" id="long-break" class="btn btns mb-2 mb-md-0" type="button">Intervalo Longo</button> <!-- Adicione classes de margem inferior apenas para dispositivos móveis -->
+              <button onclick="selectTimer('pomodoro')" id="pomodoro" class="active-button btn btns mr-2 mb-2 mb-md-0" type="button">Pomodoro</button> 
+              <button onclick="selectTimer('short-break')" id="short-break" class="btn btns mr-2 mb-2 mb-md-0" type="button">Intervalo Curto</button> 
+              <button onclick="selectTimer('long-break')" id="long-break" class="btn btns mb-2 mb-md-0" type="button">Intervalo Longo</button> 
             </div>
             <div>
               <p id="counter" class="display-1">25:00</p>
@@ -57,6 +57,13 @@
         </div>
       </div>
     </div>
+    
+    <template id="task-template">
+      <li class="list-group-item d-flex justify-content-between align-items-center task">
+        <span class="task-text"></span>
+        <button id="delete-button" class="btn btn-danger btn-sm">Delete</button>
+      </li>
+    </template>
   </body>
   
   <audio src="./assets/sounds/clock-alarm-8761.mp3" id="finish"></audio>
