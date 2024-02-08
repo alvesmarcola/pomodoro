@@ -15,30 +15,30 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,700&display=swap">
   </head>
-  <body>
-    <div class="image-effect">
+  <body class="text-center">
+    <div class="container-fluid image-effect"> <!-- Adicione a classe container-fluid para ocupar a largura total -->
       <div class="container d-flex justify-content-center align-items-center">
         <div class="row">
-          <div class="col-md-6 container-timer text-center">
+          <div class="col-md-6 container-timer text-center justify-content-center">
             <div class="btn-group">
-              <button onclick="selectTimer('pomodoro')" id="pomodoro" class=" active-button btn btns mr-5" type="button">Pomodoro</button>
-              <button onclick="selectTimer('short-break')" id="short-break" class=" btn btns mr-5" type="button">Intervalo Curto</button>
-              <button onclick="selectTimer('long-break')" id="long-break" class=" btn btns" type="button">Intervalo Longo</button>
+              <button onclick="selectTimer('pomodoro')" id="pomodoro" class="active-button btn btns mr-2 mb-2 mb-md-0" type="button">Pomodoro</button> <!-- Adicione classes de margem inferior apenas para dispositivos móveis -->
+              <button onclick="selectTimer('short-break')" id="short-break" class="btn btns mr-2 mb-2 mb-md-0" type="button">Intervalo Curto</button> <!-- Adicione classes de margem inferior apenas para dispositivos móveis -->
+              <button onclick="selectTimer('long-break')" id="long-break" class="btn btns mb-2 mb-md-0" type="button">Intervalo Longo</button> <!-- Adicione classes de margem inferior apenas para dispositivos móveis -->
             </div>
             <div>
               <p id="counter" class="display-1">25:00</p>
             </div>
             <div>
-              <button onclick="startTimer('selectedTimer')" id="start" class="start btn-initial p-4" type="button">Começar</button>
+              <button onclick="startTimer('selectedTimer')" id="start" class="btn-initial" type="button">Começar</button>
             </div>
           </div>
           <div class="col-md-6">
             <div class="tasks text-center">
-              <h1 class="display-3">Tarefas</h1>
+              <h2 class="display-3">Tarefas</h2>
               <form>
                 <div class="form-group d-flex align-items-center">
                   <input id="new-task" type="text" name="Nova Tarefa" placeholder="Adicione uma nova tarefa" class="form-control">
-                  <button id="add-task" type="button" class="btn btn-primary">+</button> 
+                  <button id="add-task" type="button" class="btn btn-primary">+</button>
                 </div>
               </form>
               <div class="tasks-list">
@@ -46,8 +46,8 @@
               </div>
             </div>
             <div class="binaural text-center mt-4">
-              <h2>Áudio Binaural</h2>
-              <h3>O que é um áudio binaural?</h3>
+              <h3 class="font-weight-bold">Áudio Binaural</h3>
+              <h4>O que é um áudio binaural?</h4>
               <p class="lead">Áudios binaurais são sons projetados para estimular o cérebro, usando diferentes frequências em cada ouvido. Eles são usados para induzir estados mentais específicos, como foco e relaxamento, e são populares em técnicas de produtividade, como o método Pomodoro.</p>
               <audio id="audio" controls>
                 <source src="./assets/ondas.mp3" type="audio/mpeg">
@@ -59,4 +59,5 @@
     </div>
   </body>
   
+  <audio src="./assets/sounds/clock-alarm-8761.mp3" id="finish"></audio>
 </html>

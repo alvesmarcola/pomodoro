@@ -3,19 +3,15 @@ const taskInput = document.querySelector("#new-task");
 const addTaskButton = document.querySelector("#add-task");
 const taskTemplate = document.querySelector("#task-template");
 
-renderTasksFromLocalStorage();
+// Aqui você precisa garantir que o template esteja corretamente configurado no HTML
 
-addTaskButton.addEventListener("click", () => {
-  const newTask = taskInput.value;
-
-  addTask(newTask);
-});
-
+// Esta função parece correta, ela renderiza uma tarefa com base no modelo
 function renderTask(newTask) {
   const taskTemplateClone = taskTemplate.content.cloneNode(true);
   const newTaskElement = taskTemplateClone.querySelector(".task");
   const taskText = newTaskElement.querySelector(".task-text");
 
+  // Adicione o evento de clique para excluir a tarefa
   const deleteButton = taskTemplateClone.querySelector("#delete-button");
   deleteButton.addEventListener("click", () => deleteTask(newTask.id));
 
@@ -24,6 +20,17 @@ function renderTask(newTask) {
 
   tasksOl.appendChild(taskTemplateClone);
 }
+
+
+
+renderTasksFromLocalStorage();
+
+addTaskButton.addEventListener("click", () => {
+  const newTask = taskInput.value;
+
+  addTask(newTask);
+});
+
 
 function saveTaskToLocalStorage(newTask) {
   const tasks = localStorage.getItem("tasks");

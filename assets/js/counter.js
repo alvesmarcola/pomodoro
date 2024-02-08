@@ -51,6 +51,10 @@ function changeSelectedClasses(timer) {
     }
 }
 
+startButton.addEventListener('click', function() {
+    startTimer(selectedTimer); // Chamar startTimer com o temporizador selecionado
+});
+
 function startTimer(timer) {
     clearInterval(intervalId); // Para qualquer temporizador existente antes de iniciar um novo
     let seconds = getTimerValue(timer);
@@ -60,13 +64,15 @@ function startTimer(timer) {
 
         counter.textContent = sTom(seconds);
 
-        if (seconds <= 0) { // Alterado de '===' para '<='
+        if (seconds <= 0) { 
             clearInterval(intervalId);
-            // Aqui você pode adicionar lógica para lidar com o final do temporizador, como iniciar um novo temporizador de intervalo
-        }
-    }, 1000); // Alterando de 10 para 1000 (1 segundo)
-}
+            const audio = document.getElementById('finish');
+            audio.play(); // reproduzir o áudio
 
-startButton.addEventListener('click', function() {
-    startTimer(selectedTimer); // Chamar startTimer com o temporizador selecionado
-});
+            // Quando o áudio terminar de ser reproduzido, iniciar outro contador
+            audio.addEventListener('ended', function() {
+                selectTimer(selectedTimer); // iniciar outro contador
+            });
+        }
+    }, 1); 
+}

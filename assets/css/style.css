@@ -18,12 +18,6 @@ body {
   height: 100vh;
 }
 
-.container {
-  background-color: rgba(213, 213, 213, 0.8);
-  border-radius: 5px;
-  width: 70vw;
-  height: 90vh;
-}
 
 .divider {
   background-color: #B0B0B0;
@@ -36,7 +30,7 @@ body {
 }
 
 /* Estilos para os botões de contagem */
-/* Estilos para os botões de contagem */
+
 .btns {
   color: rgba(42, 64, 84, 0.5);
   background: white;
@@ -63,6 +57,7 @@ body {
   height: 55px;
   box-shadow: 0 2.5px rgba(0, 0, 0, 0.5);
   color: #2A4054;
+  border-radius: 5%;
 }
 
 /* Estilo para o botão de adicionar tarefa */
@@ -96,3 +91,61 @@ body {
 .binaural {
   margin-top: 20px;
 }
+
+.container {
+  background-color: rgba(213, 213, 213, 0.8);
+  border-radius: 5px;
+  width: 90%; 
+  max-width: 800px; 
+  height: 90vh;
+  padding: 20px;
+  margin: auto; /* Centraliza o container */
+  box-sizing: border-box;
+}
+
+.tasks form button {
+  margin-left: 5px; 
+}
+
+.binaural {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Estilos para dispositivos móveis */
+@media screen and (max-width: 767px) {
+  .container {
+    width: 100%; /* Defina a largura como 100% para ocupar toda a largura da tela */
+    border-radius: 0; /* Remova o arredondamento das bordas */
+    height: auto; /* Altura automática para acomodar o conteúdo */
+  }
+
+  .container-timer {
+    padding-bottom: 20px; /* Adicione um espaço entre o cronômetro e as tarefas */
+  }
+
+  .col-md-6 {
+    width: 100%; /* Define a largura da coluna como 100% */
+    padding: 0 15px; /* Adiciona um espaçamento interno */
+  }
+
+  .tasks form {
+    margin-bottom: 20px; /* Adiciona margem inferior ao formulário de tarefas */
+  }
+
+  .tasks-list {
+    max-height: none; /* Remove a altura máxima para a lista de tarefas */
+    overflow-y: visible; /* Permite rolar a lista de tarefas conforme necessário */
+  }
+}
+
+@media screen and (max-width: 768px){
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .display-3{
+    font-size: 3rem;
+  }
+
+} 
